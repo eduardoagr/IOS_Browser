@@ -128,7 +128,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Browser" id="4X7-uC-Y5K">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="sCT-fT-jI8">
+                        <barButtonItem key="leftBarButtonItem" id="sCT-fT-jI8">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Td8-4y-3iU">
                                 <rect key="frame" x="20" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -138,7 +138,7 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="4lK-lH-mKx">
+                        <barButtonItem key="rightBarButtonItem" id="4lK-lH-mKx">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="rIO-bd-wDG">
                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

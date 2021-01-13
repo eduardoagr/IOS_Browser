@@ -127,8 +127,6 @@ class CanvasViewController: UIViewController, WKNavigationDelegate, UISearchBarD
         try! realm.write {
             tab.initialURL = encodedURL.lowercased()
         }
-        
-        
     }
     
     func displayError(_ info: String) {
@@ -195,10 +193,7 @@ class CanvasViewController: UIViewController, WKNavigationDelegate, UISearchBarD
             }
             LoadBookmark()
         }
-        
         present(alertViewController, animated: true, completion: nil)
-        
-        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -245,6 +240,22 @@ class CanvasViewController: UIViewController, WKNavigationDelegate, UISearchBarD
             backButton.isEnabled = true
         }else {
             backButton.isEnabled = false
+        }
+    }
+    
+    func delagate(_ tab: Tab, _ tabIndex: Int){
+        let realm = try! Realm()
+        try! realm.write{
+            realm.delete(tab)
+        }
+        tabs.remove(at: tabIndex)
+        webviews.remove(at: tabIndex)
+        if selectedTab == tabIndex {
+            selectedTab = tabIndex - 1
+            LoadWebViews()
+            navigationController?.popViewController(animated: true)
+        }else if selectedTab > tabIndex {
+            selectedTab = selectedTab - 1
         }
     }
     
